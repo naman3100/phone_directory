@@ -2,7 +2,7 @@ var express=require("express");
 var app=express();
 var bodyParser =require("body-parser");
 var methodOverride  =require("method-override");
-
+var port = process.env.PORT || 8080;
 
 var array=[{name:"Naman Agarwal",ph:"8617558341"}];
 
@@ -47,7 +47,7 @@ if (index > -1) {
 res.redirect("/");
 }) 
 
-app.listen(3000,()=> 
+app.listen(port,()=> 
 {
-    console.log("Server Started on port no 3000");
+    console.log("Our App is running");
 })           
